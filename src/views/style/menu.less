@@ -1,0 +1,15 @@
+ @font-col: #1FADF2;
+ .menu_style(@display, @font-size, @pad-left){
+	li{
+	display: @display;
+	  a{
+	    text-decoration: none;
+	    color: @font-col;
+	    font-size: @font-size;
+	    padding-left:@pad-left;
+	    &:hover{
+	      text-decoration: underline;
+	    }
+	  }
+	}
+}
