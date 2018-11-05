@@ -1,5 +1,8 @@
+  @import (reference) "./media.less";
   @text-col: #AAA;
   @text-size: 20px;
+  @text-size-mob: 15px;
+  @text-size-tab: 17px;
   //@shadow_col: rgba(150,150,150, 0.5);
   @shadow: 3px 3px 7px @shadow_col;
   @shadow_col: rgba(31,173,242, 0.5);
@@ -10,6 +13,12 @@
 	font-weight: bold;
 	color: @text-col;
 	text-shadow: @shadow;
+	@media @mobile, @mobile-hor{
+		font-size: @text-size-mob + 3px;
+	}
+	@media @tablet, @tablet-hor{
+		font-size: @text-size-tab + 3px;
+	}
  }
 
 .second_head(){
@@ -18,6 +27,12 @@
 	font-weight: bold;
 	color: @text-col;
 	text-shadow: @shadow;
+	@media @mobile, @mobile-hor{
+		font-size: @text-size-mob + 3px;
+	}
+	@media @tablet, @tablet-hor{
+		font-size: @text-size-tab + 3px;
+	}
 }
 
 .second_head_left(){
@@ -31,4 +46,10 @@
 	font-weight: normal;
 	color: @text-col;
 	text-shadow: none;
+	@media @mobile, @mobile-hor{
+		font-size: @text-size-mob;	
+	}
+	@media @tablet, @tablet-hor{
+		font-size: @text-size-tab;
+	}
 }

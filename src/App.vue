@@ -28,22 +28,21 @@
 <style lang="less">
 @import (reference) "./views/style/menu.less";
 @import (reference) "./views/style/text.less";
+@import (reference) "./views/style/media.less";
 @import "../node_modules/animate.css/animate.min.css";
 @back-col: rgba(0, 0, 0, .65);
 @back-col-rout-view: rgba(15,20,25, 0.9);
-@tel-location: 100px;
 .telefon_style(){
   font-weight: bold;
   color: @text-col;
   text-shadow: @shadow;
   padding: .7;
 }
-
 .vologda{
     height: 100vh;
     width: 100wh;
     font-family: 'Roboto Slab', serif;
-        overflow: hidden;
+    overflow: hidden;
     .normal_text();
     background-image: url(./views/image/vologda2.jpg);
     background-size: cover;
@@ -58,9 +57,29 @@
       .menu_style(inline-block, 20px, 30px);
       text-align: right;
       padding: @tel-location 10% 0 0;
+      @media @mobile, @mobile-hor{
+        margin-bottom: 30px;
+        padding: @tel-location - 20px 5% 0 0;
+      }
+      @media @mobile{
+        .menu_style(inline-block, 16px, 10px);
+      }
+      @media @mobile-hor{
+        .menu_style(inline-block, 16px, 30px);
+      }
+      @media @tablet-hor{
+        .menu_style(inline-block, 18px, 35px);
+        padding: @tel-location - 20px 40px 0 0;
+      }
       .top_menu{
         cursor: pointer;
         &:hover{
+          .submenu{
+            display: inline-block;
+            overflow: hidden;
+          }
+        }
+        &:active{
           .submenu{
             display: inline-block;
             overflow: hidden;
@@ -71,18 +90,49 @@
           top: 100%;
           display: none;
           right: 350px;
+          @media @mobile{
+            right: 86px;
+            padding: 0;
           }
+          @media @mobile-hor{
+            right: 116px;
+            padding: 0;
+          }
+          @media @tablet{
+            right: 208px;
+          }
+          @media @tablet-hor{
+            right: 164px;
+          }
+        }
       }
     }
       .logo{
-      position: absolute;
-	  background-image: url('./views/image/logo200.png');
-	  background-size: cover;
-      background-repeat: no-repeat;
-	  height: 130px;
-	  width: 213px;
-	  top: 20px;
-	  left: calc((50% - 148px/2) - 30px);
+         position: absolute;
+	       background-image: url('./views/image/logo200.png');
+	       background-size: cover;
+         background-repeat: no-repeat;
+	       height: 130px;
+	       width: 213px;
+	       top: 20px;
+	       left: calc((50% - 148px/2) - 30px);
+         @media @mobile{
+          top: 5px;
+          left: 193px;
+          height: 65px;
+          width: 106px;
+         }
+         @media @mobile-hor{
+          height: 65px;
+          width: 106px;
+          top: 10px; 
+          left: calc(50% - 106px/2);
+         }
+         @media @tablet, @tablet-hor{
+          top: 10px;
+          height: 95px;
+          width: 156px;
+         }
       }
       .telefon{
       position: absolute;
@@ -90,6 +140,17 @@
       left: 7%;
 	    .telefon_style();
       text-decoration: none;
+      @media @mobile{
+        top: 53px;
+        left: 10px;
+      }
+      @media @mobile-hor{
+        top: 53px;
+        left: 20px;
+      }
+      @media @tablet, @tablet-hor{
+        top: 77px;
+      }
     }
     .under_telefon{
       position: absolute;
@@ -97,6 +158,18 @@
       left: 7%;
       .telefon_style();
       text-transform: uppercase;
+      @media @mobile{
+        left: 10px;
+        top: 10px;
+      }
+      @media @mobile-hor{
+        top: 5px;
+        left: 20px;
+      }
+      @media @tablet, @tablet-hor{
+        top: 17px;
+
+      }
     }
     #phrase{
       position: absolute;
@@ -105,6 +178,21 @@
       width: 400px;
       text-align: center;
       font-size: 15px;
+      @media @mobile{
+        display: none;
+      }
+      @media @mobile-hor{
+        top: 10px;
+        left: calc((50% + 106px/2) + 10px); /* 106px - width logo in mobile-hor media */ 
+        font-size: 10px;
+        width: calc((50% - 106px/2) - 20px);
+      }
+      @media @tablet, @tablet-hor{
+        top: 10px;
+        left: calc((50% + 156px/2) + 10px); /* 106px - width logo in mobile-hor media */ 
+        font-size: 13px;
+        width: calc((50% - 156px/2) - 20px);
+      }
     }
       .main_rout{
         overflow: auto;
@@ -114,6 +202,9 @@
         padding: 0 30px 0 30px;
         background: @back-col-rout-view;
         box-shadow: 4px 4px 20px 20px @back-col-rout-view;
+        @media @mobile, @mobile-hor{
+        height: calc(100% - (@tel-location - 20px) - (16px * 2) - 40px); /*(@tel-location - 20px) - padding-top menu, 16px*2 - font-size menu */
+        }
     }
     .footer{
       font-size: 10px;
@@ -123,6 +214,10 @@
       margin: 0 20%;
       text-align: center;
       opacity: 0.75;
+      @media @mobile{
+        width: 100%;
+        margin: 0 auto;
+      }      
       hr{
         margin: 0 auto;
         opacity: 0.3;
@@ -135,6 +230,9 @@
 }
 .page_head{
     .first_head();
+    @media @mobile{
+      margin: 7px 0;
+    }
 }
 
 .list_head{

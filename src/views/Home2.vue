@@ -43,6 +43,19 @@
  		overflow: hidden;
  		float: left;
  		box-shadow: 0 3px 7px #999, inset -3px 3px 20px @shadow_col;
+ 		@media @mobile, @mobile-hor{
+ 			width: 110px;
+ 			height: 110px;
+ 			border-radius: 55px;
+ 			display: inline-block;
+ 			margin: 0 10px 0 0;
+ 		}
+ 		@media @tablet, @tablet-hor{
+ 			width: 150px;
+ 			height: 150px;
+ 			border-radius: 75px;
+ 			margin: 0 20px 10px 0;
+ 		}
  		.foto_leader_night{
  			width: 100%;
  			height: 100%;

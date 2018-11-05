@@ -305,6 +305,12 @@ table{
 }
 .comment{
 	font-size: @text-size - 3px;
+	@media @mobile, @mobile-hor{
+		font-size: @text-size-mob - 2px;
+	}
+	@media @tablet-hor{
+		font-size: @text-size-tab - 2px;
+	}
 }
 
 </style>

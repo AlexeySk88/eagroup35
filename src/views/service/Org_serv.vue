@@ -17,6 +17,7 @@
 @import (reference) "../style/text.less";
 @import (reference) "../../../node_modules/animate.css/animate.min.css";
 @service_padding: 170px;
+@service_padding_mob: 100px;
 .sidemenu{
 	position: absolute;
     top: 250px;
@@ -25,15 +26,31 @@
 	width: @service_padding;
 	border-right: 1px solid @text-col;
 	margin-right: 60px;
-
-	.menu_style(block, 20px, 0);
+	.menu_style(block, @text-size, 0);
 	li{
 		padding-bottom: 20px;
+	}
+	@media @mobile, @mobile-hor{
+		overflow: auto;
+		top: 135px;
+		left: 15px;
+		.menu_style(block, @text-size-mob, 0);
+		width: @service_padding_mob;
+		height: calc(100% - (@tel-location - 20px) - (16px * 2) - 40px); /* parameter see in app.vue @media for main_rout */
+	}
+	@media @tablet, @tablet-hor{
+		.menu_style(block, @text-size-tab, 0);
 	}
 }
 .service_content{
 	margin-left: @service_padding + 15px;
 	overflow: hidden;
+	@media @mobile, @mobile-hor, @tablet, @tablet-hor{
+		overflow: auto;
+	}
+	@media @mobile, @mobile-hor{
+		margin-left: @service_padding_mob;
+	}
 }
 
 .animated.fadeInLeft.fast.booker{
