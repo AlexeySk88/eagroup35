@@ -17,6 +17,7 @@
 @import (reference) "../style/text.less";
 @import (reference) "../../../node_modules/animate.css/animate.min.css";
 @service_padding: 170px;
+@service_padding_mob: 100px;
 .sidemenu{
 	position: absolute;
     top: 250px;
@@ -25,15 +26,23 @@
 	width: @service_padding;
 	border-right: 1px solid @text-col;
 	margin-right: 60px;
-
 	.menu_style(block, 20px, 0);
 	li{
 		padding-bottom: 20px;
+	}
+	@media @mobile{
+		top: 135px;
+		left: 15px;
+		.menu_style(block, 15px, 0);
+		width: @service_padding_mob;
 	}
 }
 .service_content{
 	margin-left: @service_padding + 15px;
 	overflow: hidden;
+	@media @mobile{
+		margin-left: @service_padding_mob;
+	}
 }
 
 .animated.fadeInLeft.fast.booker{

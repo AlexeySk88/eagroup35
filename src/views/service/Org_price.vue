@@ -305,6 +305,9 @@ table{
 }
 .comment{
 	font-size: @text-size - 3px;
+	@media @mobile{
+		font-size: @text-size - 7px;
+	}
 }
 
 </style>

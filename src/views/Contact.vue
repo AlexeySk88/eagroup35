@@ -7,7 +7,7 @@
 		<p><span class="contact_name">Наш e-mail: </span><a href="mailto:eagroup35@mail.ru">eagroup35@mail.ru</a></p>
 		<p><span class="contact_name">Наш адрес: </span>г. Вологда, ул. Саммера, 53А</p>
 		<p class="contact_name map_name">Карта</p>
-		<div id="map" style="width:70%; height:400px"></div>
+		<div id="map"></div>
 	</div>
  </template>
 
@@ -29,8 +29,15 @@
 			margin-bottom: 0;
 		}
 		#map{
+			width:70%; 
+			height:400px;
 			margin: 0 auto;
 			box-shadow: 19px 0 22px -16px @shadow_col, -19px 0 22px -16px @shadow_col;
+			@media @mobile{
+				width: 100%;
+				height: 300px;
+				margin: 0 auto;
+			}
 		}
 		a{
 			text-decoration: none;

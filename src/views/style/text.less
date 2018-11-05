@@ -1,5 +1,7 @@
+  @import (reference) "./media.less";
   @text-col: #AAA;
   @text-size: 20px;
+  @text-size-mob: 15px;
   //@shadow_col: rgba(150,150,150, 0.5);
   @shadow: 3px 3px 7px @shadow_col;
   @shadow_col: rgba(31,173,242, 0.5);
@@ -10,6 +12,9 @@
 	font-weight: bold;
 	color: @text-col;
 	text-shadow: @shadow;
+	@media @mobile{
+		font-size: @text-size-mob + 3px;
+	}
  }
 
 .second_head(){
@@ -18,6 +23,9 @@
 	font-weight: bold;
 	color: @text-col;
 	text-shadow: @shadow;
+	@media @mobile{
+		font-size: @text-size-mob + 3px;
+	}
 }
 
 .second_head_left(){
@@ -31,4 +39,7 @@
 	font-weight: normal;
 	color: @text-col;
 	text-shadow: none;
+	@media @mobile{
+		font-size: @text-size-mob;	
+	}
 }

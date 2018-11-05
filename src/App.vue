@@ -28,6 +28,7 @@
 <style lang="less">
 @import (reference) "./views/style/menu.less";
 @import (reference) "./views/style/text.less";
+@import (reference) "./views/style/media.less";
 @import "../node_modules/animate.css/animate.min.css";
 @back-col: rgba(0, 0, 0, .65);
 @back-col-rout-view: rgba(15,20,25, 0.9);
@@ -38,7 +39,6 @@
   text-shadow: @shadow;
   padding: .7;
 }
-
 .vologda{
     height: 100vh;
     width: 100wh;
@@ -58,10 +58,21 @@
       .menu_style(inline-block, 20px, 30px);
       text-align: right;
       padding: @tel-location 10% 0 0;
+      @media @mobile{
+        .menu_style(inline-block, 16px, 10px);
+        margin-bottom: 30px;
+        padding: 80px 10px 0 0;
+      }
       .top_menu{
         cursor: pointer;
         &:hover{
           .submenu{
+            display: inline-block;
+            overflow: hidden;
+          }
+        }
+        &:click{
+            .submenu{
             display: inline-block;
             overflow: hidden;
           }
@@ -75,14 +86,20 @@
       }
     }
       .logo{
-      position: absolute;
-	  background-image: url('./views/image/logo200.png');
-	  background-size: cover;
-      background-repeat: no-repeat;
-	  height: 130px;
-	  width: 213px;
-	  top: 20px;
-	  left: calc((50% - 148px/2) - 30px);
+         position: absolute;
+	       background-image: url('./views/image/logo200.png');
+	       background-size: cover;
+         background-repeat: no-repeat;
+	       height: 130px;
+	       width: 213px;
+	       top: 20px;
+	       left: calc((50% - 148px/2) - 30px);
+         @media @mobile{
+          height: 65px;
+          width: 106px;
+          left: 10px;
+          top: 10px;
+         }
       }
       .telefon{
       position: absolute;
@@ -90,6 +107,10 @@
       left: 7%;
 	    .telefon_style();
       text-decoration: none;
+      @media @mobile{
+        top: 53px;
+        left: 140px;
+      }
     }
     .under_telefon{
       position: absolute;
@@ -97,6 +118,10 @@
       left: 7%;
       .telefon_style();
       text-transform: uppercase;
+      @media @mobile{
+        top: 5px;
+        left: 140px;
+      }
     }
     #phrase{
       position: absolute;
@@ -105,6 +130,9 @@
       width: 400px;
       text-align: center;
       font-size: 15px;
+      @media @mobile{
+        display: none;
+      }
     }
       .main_rout{
         overflow: auto;

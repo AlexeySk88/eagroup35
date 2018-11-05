@@ -13,13 +13,18 @@
 
 <style lang="less">
  	@import (reference) "./style/box_page.less";
-	.mini_page{
-		.box_page();
-		p.share_head{
-			text-shadow: 0 0 3px black;
-			 background: linear-gradient(to right, rgba(31,173,242, .7), rgba(31,173,242, 0));
-		}		
-	}
+ 	ul{
+		@media @mobile{
+			padding-left: 0;
+		}
+ 		.mini_page{
+			.box_page();
+			p.share_head{
+				text-shadow: 0 0 3px black;
+				 background: linear-gradient(to right, rgba(31,173,242, .7), rgba(31,173,242, 0));
+			}		
+		}
+ 	}
 </style>
 
 <script>
