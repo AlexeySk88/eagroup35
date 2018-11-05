@@ -209,7 +209,7 @@
     .footer{
       font-size: 10px;
       position: absolute;
-      top: calc(100% - 15px);
+      bottom: 0;
       width: 60%;
       margin: 0 20%;
       text-align: center;
