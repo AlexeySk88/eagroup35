@@ -26,6 +26,7 @@
 				<li>безупречная репутация</li>
 			</ul>
 		</span>
+		<p>Предлагаем Вашему вниманию наши <router-link class='href_pack upper' to='../share'>акции</router-link> и <router-link class='href_pack upper' to='/bus_service/org_price'>пакетные предложения</router-link></p>
 		<p class="success">ВАШ УСПЕХ – НАША РАБОТА</p>
 		<div class="leader">Алексей Шулепов<br>Руководитель ЕАГруп</div>
 	</div>
@@ -33,6 +34,7 @@
 
  <style lang="less">
  	@import (reference) "./style/text.less";
+ 	@import (reference) "./style/menu.less";
  	.foto_leader{
 		border-radius: 100px;
  		width: 200px;
@@ -82,5 +84,12 @@
 				.second_head_left();
 			}
 		}		
+	}
+
+	.href_pack{
+		.href_pack();
+	}
+	.upper{
+		text-transform: uppercase;
 	}
  </style>

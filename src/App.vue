@@ -10,17 +10,17 @@
 	    </div>
 		<ul class="menu animated fadeInRight slower">
 		  <li><router-link to = "/" exact>Главная</router-link></li>
-		  <li class="top_menu"><a>Услуги</a>
-        <ul class="submenu animated fadeInDown">
+		  <li class="top_menu" v-on:mouseover='activeFlipX = true' v-on:mouseout='activeFlipX = false'><a>Услуги</a>
+        <ul class="submenu animated" v-bind:class="{flipInX: activeFlipX, flipOutX: !activeFlipX}">
           <li><router-link to = "/bus_service/org_legal" exact>Бизнесу</router-link></li>
           <li><router-link to = "/citizen" exact>Гражданам</router-link></li>
         </ul>
       </li>
       <li><router-link to = "/share">Акции</router-link></li>
-		  <li><router-link to = "/contact">Контакты</router-link></li>
+		  <li><router-link to = "/contact">Контакты</router-link></li>  
 		</ul>
 		  <router-view class="main_rout"></router-view>
-      <div class="footer"><hr>Разработка: Скриплёнок Алексей; &emsp; Фото: Бачтуб Дмитрий</div>
+      <noindex><div class="footer"><hr>Разработка: Скриплёнок Алексей; &emsp; Фото: Бачтуб Дмитрий</div></noindex>
     </div>
   </div>
 </template>
@@ -73,22 +73,9 @@
       }
       .top_menu{
         cursor: pointer;
-        &:hover{
-          .submenu{
-            display: inline-block;
-            overflow: hidden;
-          }
-        }
-        &:active{
-          .submenu{
-            display: inline-block;
-            overflow: hidden;
-          }
-        }
         .submenu{
           position: absolute;
           top: 100%;
-          display: none;
           right: 350px;
           @media @mobile{
             right: 86px;
@@ -265,8 +252,9 @@
     num: 0,
     menu_slide: false,
 	tel_height: false,
-	show_prase: true
-    }
+	show_prase: true,
+  activeFlipX: false
+      }
   },
   computed:{
       set_num(){setInterval(() => {

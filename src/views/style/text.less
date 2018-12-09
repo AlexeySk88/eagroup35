@@ -1,4 +1,5 @@
   @import (reference) "./media.less";
+  @import (reference) "./menu.less";
   @text-col: #AAA;
   @text-size: 20px;
   @text-size-mob: 15px;
@@ -51,5 +52,13 @@
 	}
 	@media @tablet, @tablet-hor{
 		font-size: @text-size-tab;
+	}
+}
+
+.href_pack{
+	text-decoration: none;
+	color: @font-col;
+	&:hover{
+	  text-decoration: underline;
 	}
 }

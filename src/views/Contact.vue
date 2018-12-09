@@ -4,10 +4,12 @@
 			<li><a href="tel:508181">50-81-81 (код города набирать НЕ ТРЕБУЕТСЯ)</a></li>
 			<li><a href="tel:+79115018181">+7 (911) 501-81-81</a></li>
 		</ul>
-		<p><span class="contact_name">Наш e-mail: </span><a href="mailto:eagroup35@mail.ru">eagroup35@mail.ru</a></p>
-		<p><span class="contact_name">Наш адрес: </span>г. Вологда, ул. Саммера, 53А</p>
+		<p><span class="contact_name">Наш адрес: </span>г. Вологда, ул. Лермонтова 15, оф. 308</p>
+		<p><span class="contact_name">Мы ВКонтакте: </span><a class="href_pack" href="https://vk.com/public173601284" target="_blank">https://vk.com/public173601284</a></p>
+		<p><span class="contact_name">Наш e-mail: </span><a class="href_pack" href="mailto:eagroup35@mail.ru">eagroup35@mail.ru</a></p>
 		<p class="contact_name map_name">Карта</p>
 		<div id="map"></div>
+		<iframe class="ya_panam" src="https://yandex.ru/map-widget/v1/-/CBFK5Zcu0A" frameborder="1" allowfullscreen="true"></iframe>
 	</div>
  </template>
 
@@ -19,6 +21,9 @@
 			.second_head();
 			text-align: center;
 		}
+		.href_pack{
+			.href_pack();
+		}
 		ul{
 			padding-left: 0;
 			li{
@@ -28,7 +33,7 @@
 		.map_name{
 			margin-bottom: 0;
 		}
-		#map{
+		#map, .ya_panam{			
 			width:70%; 
 			height:400px;
 			margin: 0 auto;
@@ -44,62 +49,32 @@
 				height: 500px;
 			}
 		}
+
+		#map{
+			margin-bottom: 20px;
+		}
 		a{
 			text-decoration: none;
 			.normal_text();
 		}
+
 	}
  </style>
 
 <script>
 	export default {
 		name: 'contact',
-		created() {
-		    let recaptchaScript = document.createElement('script')
-		    recaptchaScript.setAttribute('src', 'https://maps.api.2gis.ru/2.0/loader.js?pkg=full')
-		    document.head.appendChild(recaptchaScript)
-		},
 		mounted() {
-			let c = 59.234956;
-			let f = 39.942348;
 			var map;
-
+			var c = 59.22149;
+			var f = 39.892981;
 		    DG.then(function () {
 		        map = DG.map('map', {
 		            center: [c, f],
-		            zoom: 15
+		            zoom: 17
 		        });
 		        DG.marker([c, f]).addTo(map); 
-		    });
-
-
-		    (function (d, w, c) {
-          (w[c] = w[c] || []).push(function() {
-              try {
-                  w.yaCounter50632792 = new Ya.Metrika2({
-                      id:50632792,
-                      clickmap:true,
-                      trackLinks:true,
-                      accurateTrackBounce:true,
-                      webvisor:true
-                  });
-            var yaCounter50632792 = new Ya.Metrika({id: 50632792});
-		    yaCounter50632792.hit('/contact', {
-		        title: 'Контактная информация'});
-              } catch(e) { }
-          });
-
-          var n = d.getElementsByTagName("script")[0],
-              s = d.createElement("script"),
-              f = function () { n.parentNode.insertBefore(s, n); };
-          s.type = "text/javascript";
-          s.async = true;
-          s.src = "https://mc.yandex.ru/metrika/tag.js";
-
-          if (w.opera == "[object Opera]") {
-              d.addEventListener("DOMContentLoaded", f, false);
-          } else { f(); }
-      })(document, window, "yandex_metrika_callbacks2");
+		    });		   
 		}
 	}
  </script>
