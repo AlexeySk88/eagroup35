@@ -5,29 +5,16 @@
 		<div class="foto_leader">
 			<div class="foto_leader_night"></div>
 		</div>
-		<div><b>ЕАГруп</b> – это команда профессионалов, которая решит любой вопрос в области права, финансов, бухгалтерского и налогового учета.<br>Мы используем опыт практикующих специалистов в области гражданского, финансового, налогового, административного и корпоративного законодательства, руководителей предприятий малого и среднего бизнеса, экспертов в различных областях науки.</div>
-		<p class="target">Наша главная цель – Ваш успех, Ваша уверенность, Ваша безопасность.</p>
-		<span class="block_list">
-			<ul><u>Работая с нами Вы получаете:</u>
-				<li>готовые решения Ваших задач</li>
-				<li>уверенность в неукоснительном соблюдении договоренностей</li>
-				<li>гарантию качества</li>
-				<li>широкую консультационную поддержку как в процессе сотрудничества, так и за его рамками.</li>
-				<li>точное соблюдение сроков и своевременность предоставления результата</li>
-				<li>конфиденциальность</li>
-			</ul>
-		</span>
-		<span class="block_list">
-			<ul><u>5 причин работы с нами:</u>
-				<li>большой практический опыт</li>
-				<li>профессиональная команда</li>
-				<li>ответственность</li>
-				<li>надежность и порядочность</li>
-				<li>безупречная репутация</li>
-			</ul>
-		</span>
-		<p>Предлагаем Вашему вниманию наши <router-link class='href_pack upper' to='../share'>акции</router-link> и <router-link class='href_pack upper' to='/bus_service/org_price'>пакетные предложения</router-link></p>
-		<p class="success">ВАШ УСПЕХ – НАША РАБОТА</p>
+		<p><b>ЕАГруп</b> &mdash; команда профессиональных юристов и бухгалтеров. <router-link class='href_pack' to='../about'>Подробнее</router-link></p>
+		<!--<p>Мы используем опыт практикующих специалистов в области гражданского, финансового, налогового, административного и корпоративного законодательства, руководителей предприятий малого и среднего бизнеса, экспертов в различных областях науки.</p> -->	
+		<ul class="serv_descript">Мы объединились с целью оказания квалифицированных услуг организациям, индивидуальным предпринимателям и гражданам:
+			<li>ЮРИДИЧЕСКИЕ УСЛУГИ. <router-link class='href_pack' to='../service/legal'>Подробнее</router-link><br>Оказываем все виды юридических услуг консультации юриста, представительство в суде, защита прав потребителей, регистрация предпринимателей и ООО, арбитраж, составление и экспертиза договоров.</li>
+			<li>БУХГАЛТЕРСКИЕ УСЛУГИ. <router-link class='href_pack' to='../service/booker'>Подробнее</router-link><br>Оказываем услуги подготовки бухгалтерской отчетности, бухгалтерского сопровождения, налогового планирования, выбора оптимальной системы налогообложения, анализа состояния бухгалтерского и налогового учета.</li>
+			<li>КАДРОВОЕ СОПРОВОЖДЕНИЕ. <router-link class='href_pack' to='../service/pers_officer'>Подробнее</router-link><br>Оказывает услуги по учету Вашего кадрового состава от приема на работу до увольнения.</li>
+			<li>УСЛУГИ ФИНАНСОВОГО КОНСУЛЬТАНТА. <router-link class='href_pack' to='../service/fin_consultant'>Подробнее</router-link><br>Оказываем услуги по подготовке бизнес-плана, технико-экономического обоснования проекта, анализа финансового-хозяйственной деятельности, налоговые консультации.</li>
+		</ul>
+		<p style="text-align: center">Предлагаем Вашему вниманию наши <router-link class='href_pack upper' to='../share'>акции</router-link> и <router-link class='href_pack upper' to='/bus_service/org_price'>пакетные предложения</router-link></p>
+		<p class="success upper">Наша главная цель – Ваш успех, Ваша уверенность, Ваша безопасность.</p>
 		<div class="leader">Алексей Шулепов<br>Руководитель ЕАГруп</div>
 	</div>
 </template>
@@ -35,27 +22,30 @@
  <style lang="less">
  	@import (reference) "./style/text.less";
  	@import (reference) "./style/menu.less";
+ 	@foto_leader: 200px;
+ 	@foto_leader_mob: 110px;
+ 	@foto_leader_tab: 150px;
  	.foto_leader{
-		border-radius: 100px;
- 		width: 200px;
- 		height: 200px;
- 		margin: 0 30px 20px 120px;
+		border-radius: @foto_leader/2;
+ 		width: @foto_leader;
+ 		height: @foto_leader;
+ 		margin: 0 30px 20px 0px;
  		background-image: url(./image/leader200.jpg);
  		background-size: cover;
  		overflow: hidden;
  		float: left;
  		box-shadow: 0 3px 7px #999, inset -3px 3px 20px @shadow_col;
  		@media @mobile, @mobile-hor{
- 			width: 110px;
- 			height: 110px;
- 			border-radius: 55px;
+ 			width: @foto_leader_mob;
+ 			height: @foto_leader_mob;
+ 			border-radius: @foto_leader_mob/2;
  			display: inline-block;
  			margin: 0 10px 0 0;
  		}
  		@media @tablet, @tablet-hor{
- 			width: 150px;
- 			height: 150px;
- 			border-radius: 75px;
+ 			width: @foto_leader_tab;
+ 			height: @foto_leader_tab;
+ 			border-radius: @foto_leader_tab/2;
  			margin: 0 20px 10px 0;
  		}
  		.foto_leader_night{
@@ -64,9 +54,17 @@
  			background: rgba(3,44,62, 0.4);
  		}
  	}
- 	.target{
- 		clear: left;
- 		text-align: center;
+ 	.serv_descript{
+ 		padding-left: @foto_leader + 30px;
+ 		@media @mobile, @mobile-hor{
+ 			padding-left: 10px;
+ 		}
+ 		@media @tablet, @tablet-hor{
+			padding-left: @foto_leader + 20px;
+ 		}
+ 		li{
+ 			margin-top: 20px;
+ 		}
  	}
 	.success{
 		.second_head;

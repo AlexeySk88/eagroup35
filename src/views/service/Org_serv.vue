@@ -1,11 +1,11 @@
  <template>
 	<div class="sevice">
 		<ul class="sidemenu">
-			<li class="animated fadeInLeft fast legal"><router-link to="/bus_service/org_legal">Услуги юриста</router-link></li>
-			<li class="animated fadeInLeft fast booker"><router-link to ="/bus_service/org_booker">Услуги бухгалтера</router-link></li>
-			<li class="animated fadeInLeft fast per_officer"><router-link to ="/bus_service/org_pers_officer">Услуги кадрового сопровождения</router-link></li>
-			<li class="animated fadeInLeft fast fin_cons"><router-link to ="/bus_service/org_fin_consultant">Услуги финансового консультанта</router-link></li>
-			<li class="animated fadeInLeft fast price"><router-link to ="/bus_service/org_price">Пакетные предложения</router-link></li>
+			<li class="animated fadeInLeft fast legal"><router-link to="/service/legal">Услуги юриста</router-link></li>
+			<li class="animated fadeInLeft fast booker"><router-link to ="/service/booker">Услуги бухгалтера</router-link></li>
+			<li class="animated fadeInLeft fast per_officer"><router-link to ="/service/pers_officer">Услуги кадрового сопровождения</router-link></li>
+			<li class="animated fadeInLeft fast fin_cons"><router-link to ="/service/fin_consultant">Услуги финансового консультанта</router-link></li>
+			<li class="animated fadeInLeft fast price"><router-link to ="/service/price">Пакетные предложения</router-link></li>
 		</ul>
 		<router-view class="service_content"></router-view>
 	</div>

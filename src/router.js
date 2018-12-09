@@ -17,33 +17,28 @@ export default new Router({
       component: () => import ('./views/Home2.vue')
     },
     {
-      path: '/citizen',
-      name: 'citizen',
-      component: () => import('./views/service/Citizen.vue')
-    },
-    {
-      path: '/bus_service',
+      path: '/service',
       name: 'service',
       component: () => import('./views/service/Org_serv.vue'),
       children: [
         {
-          path: 'org_legal',
+          path: 'legal',
           component: () => import('./views/service/Org_legal.vue')
         },
     		{
-            path: 'org_booker',
+            path: 'booker',
             component: () => import('./views/service/Org_booker.vue')
     		},
         {
-          path: 'org_pers_officer',
+          path: 'pers_officer',
           component: () => import('./views/service/Org_pers_officer.vue')
         },
         {
-          path: 'org_fin_consultant',
+          path: 'fin_consultant',
           component: () => import('./views/service/Org_fin_consultant.vue')
         },
         {
-          path: 'org_price',
+          path: 'price',
           component: () => import('./views/service/Org_price.vue')
         }
       ]},
@@ -56,6 +51,11 @@ export default new Router({
       path: '/contact',
       name: 'contact',
       component: () => import('./views/Contact.vue')
+    },
+    {
+      path: '/about',
+      name: 'about',
+      component: () => import('./views/About.vue')
     }
   ]
 })
