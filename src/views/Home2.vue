@@ -13,7 +13,7 @@
 			<li>КАДРОВОЕ СОПРОВОЖДЕНИЕ. <router-link class='href_pack' to='../service/pers_officer'>Подробнее</router-link><br>Оказывает услуги по учету Вашего кадрового состава от приема на работу до увольнения.</li>
 			<li>УСЛУГИ ФИНАНСОВОГО КОНСУЛЬТАНТА. <router-link class='href_pack' to='../service/fin_consultant'>Подробнее</router-link><br>Оказываем услуги по подготовке бизнес-плана, технико-экономического обоснования проекта, анализа финансового-хозяйственной деятельности, налоговые консультации.</li>
 		</ul>
-		<p style="text-align: center">Предлагаем Вашему вниманию наши <router-link class='href_pack upper' to='../share'>акции</router-link> и <router-link class='href_pack upper' to='/bus_service/org_price'>пакетные предложения</router-link></p>
+		<p style="text-align: center">Предлагаем Вашему вниманию наши <router-link class='href_pack upper' to='../share'>акции</router-link> и <router-link class='href_pack upper' to='/service/price'>пакетные предложения</router-link></p>
 		<p class="success upper">Наша главная цель – Ваш успех, Ваша уверенность, Ваша безопасность.</p>
 		<div class="leader">Алексей Шулепов<br>Руководитель ЕАГруп</div>
 	</div>
