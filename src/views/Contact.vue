@@ -1,8 +1,8 @@
  <template>
  	<div class="contact"><p class="page_head">Контакты</p>
 		<ul><span class="contact_name">Наши телефоны:</span>
-			<li><a href="tel:508181">50-81-81 (код города набирать НЕ ТРЕБУЕТСЯ)</a></li>
-			<li><a href="tel:+79115018181">+7 (911) 501-81-81</a></li>
+			<li><a href="tel:508181"><span class="mobile_href">50-81-81 </span>(код города набирать НЕ ТРЕБУЕТСЯ)</a></li>
+			<li><a href="tel:+79115018181"><span class="mobile_href">+7 (911) 501-81-81</span></a></li>
 		</ul>
 		<p><span class="contact_name">Наш адрес: </span>г. Вологда, ул. Лермонтова 15, оф. 308</p>
 		<p><span class="contact_name">Мы ВКонтакте: </span><a class="href_pack" href="https://vk.com/public173601284" target="_blank">https://vk.com/public173601284</a></p>
@@ -28,6 +28,11 @@
 			padding-left: 0;
 			li{
 				display: block;
+				.mobile_href{
+					@media @mobile, @mobile-hor, @tablet, @tablet-hor{
+				        .href_pack();
+				    }
+				}
 			}
 		}
 		.map_name{

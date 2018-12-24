@@ -2,7 +2,7 @@
     <div class="vologda">
       <div class="night">
       <div class="under_telefon animated fadeInDown slow delay-5s">услуги в области<br>права и финансов</div>
-	    <a class="telefon animated fadeInDown slow delay-5s" href="tel:508181">Телефон: 50-81-81</a>
+
 	    <div class="logo animated fadeIn slower delay-3s"></div>
 	    <div id="phrase">
 		  <cite>&laquo;{{get_text}}&raquo;</cite>
@@ -15,6 +15,7 @@
 		  <li><router-link to = "/contact">Контакты</router-link></li>
       <li><router-link to = "/about">О нас</router-link></li>    
 		</ul>
+      <a class="telefon animated fadeInDown slow delay-5s" href="tel:508181">Телефон: 50-81-81</a>
 		  <router-view class="main_rout"></router-view>
       <noindex><div class="footer"><hr>Разработка: Скриплёнок Алексей; &emsp; Фото: Бачтуб Дмитрий</div></noindex>
     </div>
@@ -102,14 +103,17 @@
 	    .telefon_style();
       text-decoration: none;
       @media @mobile{
+        .href_pack();
         top: 53px;
         left: 10px;
       }
       @media @mobile-hor{
+        .href_pack;
         top: 53px;
         left: 20px;
       }
       @media @tablet, @tablet-hor{
+        .href_pack;
         top: 77px;
       }
     }
