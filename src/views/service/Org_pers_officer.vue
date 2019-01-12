@@ -9,6 +9,6 @@
 				<li>учет страхового и трудового стажа</li>
 				<li>формирование личных дел, учет трудовых книжек</li>
 		 </ul>
-		 <router-link class="href_pack" to = "../bus_service/org_price">Пакетные предложения</router-link>		 
+		 <router-link class="href_pack" to = "/service/price">Пакетные предложения</router-link>		 
 	</div>
 </template>

@@ -12,6 +12,6 @@
 			<li>диагностика вероятности наступления банкротства</li>
 		</ul>
 		<div class="list_head">Консультационная услуга по финансовым вопросам <span class="price">от 500 руб.</span></div>
-		<router-link class="href_pack" to = "../bus_service/org_price">Пакетные предложения</router-link>
+		<router-link class="href_pack" to = "/service/price">Пакетные предложения</router-link>
 	</div>
 </template>

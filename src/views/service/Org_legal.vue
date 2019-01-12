@@ -9,6 +9,6 @@
 			<li>сопровождение процедур банкротства<span class="price"> от 2000,00 руб.</span></li>
 			<li>комплексное правовое сопровождение бизнеса<span class="price"> ( полный пакет) от 5 000,00 руб.</span></li>
 		</ul>
-		<router-link class="href_pack" to = "../bus_service/org_price">Пакетные предложения</router-link>
+		<router-link class="href_pack" to = "/service/price">Пакетные предложения</router-link>
 	</div>
 </template>

@@ -31,7 +31,7 @@
 		</ul>
 		<div class="list_head">Консультационная услуга по бухгалтерскому и налоговому учету <span class="price">от 500,00 руб.</span></div>
 		<br>
-		<router-link class="href_pack" to = "../bus_service/org_price">Пакетные предложения</router-link>
+		<router-link class="href_pack" to = "/service/price">Пакетные предложения</router-link>
 	</div>
 </template>
 
