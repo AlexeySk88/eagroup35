@@ -1,14 +1,21 @@
 {
-  "name": "eagroup",
-  "version": "0.1.0",
+  "name": "nuxt_test",
+  "version": "1.0.0",
+  "description": "Nuxt.js project",
+  "author": "skriplenok alexey <skriplenok88@mail.ru>",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
   },
   "dependencies": {
+    "nuxt": "^2.0.0",
     "animate.css": "^3.7.0",
+    "nuxt": "^2.3.4",
     "vue": "^2.5.17",
     "vue-router": "^3.0.1"
   },
