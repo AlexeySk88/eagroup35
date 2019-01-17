@@ -13,7 +13,6 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "nuxt": "^2.0.0",
     "animate.css": "^3.7.0",
     "nuxt": "^2.3.4",
     "vue": "^2.5.17",
@@ -36,7 +35,15 @@
       "plugin:vue/essential",
       "eslint:recommended"
     ],
-    "rules": {},
+    "rules": {
+        "computed-property-spacing": "off",
+        "no-undef": "off",
+        "no-empty": "off",
+        "vue/return-in-computed-property": "off",
+        "vue/no-async-in-computed-properties": "off",
+        "vue/no-side-effects-in-computed-properties": "off",
+        "no-mixed-spaces-and-tabs": "off"
+    },
     "parserOptions": {
       "parser": "babel-eslint"
     }
